@@ -2,7 +2,7 @@ data:extend({
 	{
 		type = "recipe",
 		name = "big-electric-mining-drill",
-		icon = "__bigminingdrill__/graphics/icons/big-electric-mining-drill.png",
+		icon = "__big-mining-drill-updated__/graphics/icons/big-electric-mining-drill.png",
 		icon_size = 32,
 		result = "big-electric-mining-drill",
 		energy_required = 4,

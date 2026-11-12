@@ -1,11 +1,17 @@
 {
-    "name": "bigminingdrill",
-    "version": "0.1.0",
-    "title": "2.0 Big Electric Mining Drill",
-    "author": "justchenabc",
-    "contact": "yetanotheryay on Discord",
-    "homepage": "",
-    "factorio_version": "1.1",
-    "dependencies": ["base >= 0.18"],
-    "description": "This mod adds a janky version of the Big electric mining drill from the as-yet-unreleased 2.0 Expansion."
+  "name": "big-mining-drill-updated",
+  "version": "0.1.1",
+  "title": "2.0 Big Electric Mining Drill: Updated",
+  "author": "justchenabc; johnmart19 / FactorioMods (Factorio 2.1 compatibility)",
+  "contact": "yetanotheryay on Discord",
+  "homepage": "",
+  "factorio_version": "2.1",
+  "dependencies": [
+    "base >= 2.1.24",
+    "! bigminingdrill"
+  ],
+  "description": "Factorio 2.1 compatibility port with native legacy save ownership migration. This mod adds a janky version of the Big electric mining drill from the as-yet-unreleased 2.0 Expansion.",
+  "migrates_from": [
+    "bigminingdrill"
+  ]
 }

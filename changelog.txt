@@ -1,3 +1,9 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2026-11-12
+  Changes:
+    - Update fluid-box, recipe, emissions and mining animation schemas while preserving the original drill assets and mining area.
+    - Add native ownership migration from the original mod identity while preserving existing saved state.
 
 Version: 0.1
  Date: 02.12.2023

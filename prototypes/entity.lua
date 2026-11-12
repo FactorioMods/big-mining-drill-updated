@@ -2,7 +2,7 @@
 {
     type = "mining-drill",
     name = "big-electric-mining-drill",
-    icon = "__bigminingdrill__/graphics/icons/big-electric-mining-drill.png",
+    icon = "__big-mining-drill-updated__/graphics/icons/big-electric-mining-drill.png",
     icon_size = 32,
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 1, result = "big-electric-mining-drill"},
@@ -13,32 +13,32 @@
 	  selection_box = {{-2.5, -2.5}, {2.5, 2.5}},
     input_fluid_box = {
       production_type = "input-output",
-      pipe_picture = assembler2pipepictures(),
+      pipe_picture = require("__base__.prototypes.entity.assembler-pictures").assembler2pipepictures,
       pipe_covers = pipecoverspictures(),
-      base_area = 1,
+      volume = 100,
       height = 2,
-      base_level = -1,
+      volume = 100,
       pipe_connections =
       {
         -- top
-        { position = {-1, -3} },
-        { position = {1, -3} },
+        { direction=defines.direction.north, position = {-1, -2} },
+        { direction=defines.direction.north, position = {1, -2} },
         --right
-        { position = {3, -1} },
-        { position = {3, 1} },
+        { direction=defines.direction.east, position = {2, -1} },
+        { direction=defines.direction.east, position = {2, 1} },
         --bottom
-        { position = {-1, 3} },
-        { position = {1, 3} },
+        { direction=defines.direction.south, position = {-1, 2} },
+        { direction=defines.direction.south, position = {1, 2} },
         -- left
-        { position = {-3, -1} },
-        { position = {-3, 1} },
+        { direction=defines.direction.west, position = {-2, -1} },
+        { direction=defines.direction.west, position = {-2, 1} },
       }
     },
     working_sound =
     {
       sound =
       {
-        filename = "__bigminingdrill__/sound/big-mining-drill.ogg",
+        filename = "__big-mining-drill-updated__/sound/big-mining-drill.ogg",
         volume = 0.75
       },
       apparent_volume = 1.5,
@@ -49,7 +49,7 @@
       north =
       {
         priority = "high",
-        filename = "__bigminingdrill__/graphics/entity/big-hr-electric-mining-drill-N.png",
+        filename = "__big-mining-drill-updated__/graphics/entity/big-hr-electric-mining-drill-N.png",
         line_length = 8,
         width = 65,
         height = 75,
@@ -63,7 +63,7 @@
       east =
       {
         priority = "high",
-        filename = "__bigminingdrill__/graphics/entity/big-hr-electric-mining-drill-E.png",
+        filename = "__big-mining-drill-updated__/graphics/entity/big-hr-electric-mining-drill-E.png",
         line_length = 8,
         width = 70,
         height = 66,
@@ -77,7 +77,7 @@
       south =
       {
         priority = "high",
-        filename = "__bigminingdrill__/graphics/entity/big-hr-electric-mining-drill-S.png",
+        filename = "__big-mining-drill-updated__/graphics/entity/big-hr-electric-mining-drill-S.png",
         line_length = 8,
         width = 65,
         height = 73,
@@ -91,7 +91,7 @@
       west =
       {
         priority = "high",
-        filename = "__bigminingdrill__/graphics/entity/big-hr-electric-mining-drill-W.png",
+        filename = "__big-mining-drill-updated__/graphics/entity/big-hr-electric-mining-drill-W.png",
         line_length = 8,
         width = 70,
         height = 66,
@@ -109,7 +109,7 @@
     energy_source =
     {
       type = "electric",
-      emissions_per_minute = 25,
+      emissions_per_minute = {pollution=25},
       usage_priority = "secondary-input"
     },
     energy_usage = "300kW",
